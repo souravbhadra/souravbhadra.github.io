@@ -3,7 +3,7 @@
 title: Sourav Bhadra
 
 # Name pronunciation (optional)
-name_pronunciation:
+name_pronunciation: Chien Shiung Wu
 
 # Full name (for SEO)
 first_name: Sourav
@@ -35,6 +35,10 @@ profiles:
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/souravbhadra
+  - icon: brands/x
+    url: https://twitter.com/GetResearchDev
+  - icon: brands/instagram
+    url: https://www.instagram.com/
   - icon: brands/linkedin
     url: https://www.linkedin.com/bhadrasourav
   - icon: academicons/google-scholar
@@ -55,31 +59,35 @@ education:
     date_start: 2019-08-01
     date_end: 2023-05-31
     summary: |
-      Dissertation title: 
+      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     button:
       text: 'Read Thesis'
       url: 'https://example.com'
   - area: M.Sc. in Geography and Environmental Resources
-    institution: Southern Illinois University Carbondale
+    institution: Massachusetts Institute of Technology
     date_start: 2016-01-01
     date_end: 2020-12-31
-    summary: 
+    summary: |
+      GPA: 3.8/4.0
+
       Courses included:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: Bachelor of Urban and Regional Planning
-    institution: Khulna University of Engineering and Technology
-    date_start: 2011-01-01
-    date_end: 2015-07-15
-    summary: 
+  - area: BSc Artificial Intelligence
+    institution: Massachusetts Institute of Technology
+    date_start: 2016-01-01
+    date_end: 2020-12-31
+    summary: |
+      GPA: 3.4/4.0
+      
       Courses included:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
-  - position: Data Scientist
-    company_name: Bayer
+  - position: Director of Cloud Infrastructure
+    company_name: GenCoin
     company_url: ''
     company_logo: ''
     date_start: 2021-01-01
