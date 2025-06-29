@@ -52,6 +52,7 @@ interests:
   - Remote Sensing
   - Crop Phenotyping
   - Geospatial Analytics
+  - MLOps
 
 education:
   - area: Ph.D. in Geoinformatics and Geospatial Analytics
