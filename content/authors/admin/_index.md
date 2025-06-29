@@ -36,11 +36,11 @@ profiles:
   - icon: brands/github
     url: https://github.com/souravbhadra
   - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
+    url: https://x.com/SouravBhadra019
   - icon: brands/linkedin
     url: https://www.linkedin.com/bhadrasourav
+  - icon: academicons/moodle
+    url: https://medium.com/@sbhadra019
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=twDNDo0AAAAJ&hl=en
   - icon: academicons/orcid
@@ -113,7 +113,7 @@ work:
       PyTorch, TensorFlow, Rasterio, GDAL, Geopandas, Pandas, BigQuery, AWS, AirFlow, Docker. 
   - position: Research Assistant
     company_name: Remote Sensing Lab at Saint Louis University
-    company_url: ''
+    company_url: 'http://www.remotesensinglab.org/'
     company_logo: ''
     date_start: 2019-08-01
     date_end: 2023-05-31
@@ -144,6 +144,41 @@ work:
       
       UAVs and Sensors:
       DJI Mavic, DJI Matrice, Headwall Hypersepc VNIR and SWIR, Velodyne LiDAR, Altum Multispectral, ICI and FLIR Thermal.
+  - position: Research Assistant
+    company_name: GeoFEW Lab at Southern Illinois University Carbondale
+    company_url: 'https://www.geofew.org/'
+    company_logo: ''
+    date_start: 2017-08-01
+    date_end: 2019-07-31
+    summary: |
+      Responsibilities include:
+      - Implemented hydrologic connectivity models using TauDEM in a High-performance computing (HPC) cluster named BigDawg.
+      - Created a CNN model to identify bridges/culverts from LiDAR-derived high-resolution DEMs.
+      - Automated stream delineation pipeline from DEMs using ArcPy.
+
+      Tech Stacks:
+      Python, ArcPy, ArcGIS, TensorFlow, HPC, SSH.
+  - position: GIS Analyst
+    company_name: Institute of Water Modeling (IWM), Dhaka, Bangladesh
+    company_url: 'https://www.iwmbd.org/'
+    company_logo: ''
+    date_start: 2016-01-03
+    date_end: 2017-07-31
+    summary: |
+      Responsibilities include:
+      - Devised geospatial data processing and modeling pipelines for embankment installation around major floodplains in Bangladesh; supported engineers and local governments by providing self-explanatory GIS maps.
+      - Transformed traditional map making procedures into automated systems using ArcPy-based scripting.
+      - Analyzed satellite images for detecting spatiotemporal changes of riverbanks using eCognition, ERDAS Imagine and Google Earth Engine (Python API).
+  - position: GIS Assistant
+    company_name: Asian Disaster Preparedness Center (ADPC), Dhaka, Bangladesh
+    company_url: ''
+    company_logo: ''
+    date_start: 2015-11-01
+    date_end: 2015-12-31
+    summary: |
+      Responsibilities include:
+      - Prepared community level risk and vulnerability map atlas using ArcGIS.
+      - Conducted earthquake risk and vulnerability assessment using RADIUS and HAZUS.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -154,6 +189,18 @@ skills:
         icon: custom/pytorch
       - name: TensorFlow
         icon: custom/tensorflow
+      - name: AWS
+        icon: custom/aws
+      - name: Google Cloud Platform 
+        icon: custom/googlecloud
+      - name: Git 
+        icon: custom/git
+      - name: Visual Studio Code 
+        icon: custom/visualstudio
+      - name: AirFlow 
+        icon: custom/airflow
+      - name: Google BigQuery 
+        icon: custom/brand-google-big-query
       - name: Scikit-Learn
         icon: custom/scikitlearn
       - name: Scikit-Optimize
@@ -168,18 +215,6 @@ skills:
         icon: custom/qgis
       - name: Google Earth Engine
         icon: custom/googleearthengine
-      - name: AWS
-        icon: custom/aws
-      - name: Google Cloud Platform 
-        icon: custom/googlecloud
-      - name: Git 
-        icon: custom/git
-      - name: Visual Studio Code 
-        icon: custom/visualstudio
-      - name: AirFlow 
-        icon: custom/airflow
-      - name: Google BigQuery 
-        icon: custom/brand-google-big-query
       
   - name: Hobbies
     items:
@@ -195,10 +230,8 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: Bengali
+    percent: 100
 
 # Awards.
 #   Add/remove as many awards below as you like.

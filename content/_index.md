@@ -24,20 +24,12 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: rose-petals.svg
           filters:
             brightness: 0.8
           size: cover
           position: center
           parallax: false
-  - block: markdown
-    content:
-      title: ''
-      subtitle: ''
-      text: |-
-        
-    design:
-      columns: '1'
   - block: collection
     id: papers
     content:
@@ -70,7 +62,7 @@ sections:
   #    view: article-grid
   #    columns: 1
   - block: collection
-    id: news
+    id: blog
     content:
       title: My Blog
       subtitle: ''
