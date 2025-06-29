@@ -19,7 +19,4 @@ main:
   - name: Papers
     url: publication/
     weight: 14
-  - name: Teaching
-    url: teaching/
-    weight: 15
 
