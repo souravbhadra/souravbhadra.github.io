@@ -27,7 +27,7 @@ Hugo is powerful tool for scientists and professionals to create beautiful websi
 - Go to the [Academic CV template](https://hugoblox.com/templates/details/academic-cv/) site and click the `Edit` button. 
 - This will take you to the `Create new repository` page of your github (you need to be signed in or else it will ask you to). But it will use the template version of this site so once you create your repository, it will bring in all the template files of this site.
 - The name of the repository should be `<your_github_username>.github.io`. This will tell github to make it a github page within the workflow.
-- You need to make the repository `Publi` to show it as a github page.
+- You need to make the repository `Public` to show it as a github page.
 - After creating the repository, wait some time and in a browser, type in `<your_github_username>.github.io`. This should show you the [Academic CV demo site](https://academic-demo.netlify.app/), which means github pages is working. If you make changes to this newly created repository based on your personal information, that should be reflected to the website as well.
 
 ## Run things locally
@@ -58,7 +58,7 @@ Hugo is powerful tool for scientists and professionals to create beautiful websi
 - Install the other dependencies of `hugo` using `homebrew`
 
   ```bash
-  brew install git golang hugo node
+  brew install git golang node
   ```
 
 - I used VSCode and Git to connect to my Github account and then clone the newly created `<myusername>.github.io` in my local directory. Then after making some simple changes to the template, cd into the project directory and run the following command:
@@ -67,7 +67,7 @@ Hugo is powerful tool for scientists and professionals to create beautiful websi
   hugo server -D
   ```
 
-- This will start running the output of the website in `http://localhost:1313/`. Open any browser and put that in the address bar to see the live website locally. Any changes saved will show the output in this address. This is much easier to work with as the changes take effect almost immediately. 
+- This will start running the output of the website in `http://localhost:1313/`. Open any browser and put that in the address bar to see the live website locally. Any changes saved will show the output in this address. This is much easier to work with as the changes take effect almost immediately.
 
 ## Change the template tuned to personal needs
 

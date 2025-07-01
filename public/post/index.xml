@@ -25,7 +25,7 @@
 &lt;li&gt;Go to the &lt;a href=&#34;https://hugoblox.com/templates/details/academic-cv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic CV template&lt;/a&gt; site and click the &lt;code&gt;Edit&lt;/code&gt; button.&lt;/li&gt;
 &lt;li&gt;This will take you to the &lt;code&gt;Create new repository&lt;/code&gt; page of your github (you need to be signed in or else it will ask you to). But it will use the template version of this site so once you create your repository, it will bring in all the template files of this site.&lt;/li&gt;
 &lt;li&gt;The name of the repository should be &lt;code&gt;&amp;lt;your_github_username&amp;gt;.github.io&lt;/code&gt;. This will tell github to make it a github page within the workflow.&lt;/li&gt;
-&lt;li&gt;You need to make the repository &lt;code&gt;Publi&lt;/code&gt; to show it as a github page.&lt;/li&gt;
+&lt;li&gt;You need to make the repository &lt;code&gt;Public&lt;/code&gt; to show it as a github page.&lt;/li&gt;
 &lt;li&gt;After creating the repository, wait some time and in a browser, type in &lt;code&gt;&amp;lt;your_github_username&amp;gt;.github.io&lt;/code&gt;. This should show you the &lt;a href=&#34;https://academic-demo.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic CV demo site&lt;/a&gt;, which means github pages is working. If you make changes to this newly created repository based on your personal information, that should be reflected to the website as well.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;run-things-locally&#34;&gt;Run things locally&lt;/h2&gt;
@@ -57,7 +57,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Install the other dependencies of &lt;code&gt;hugo&lt;/code&gt; using &lt;code&gt;homebrew&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install git golang hugo node
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install git golang node
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;I used VSCode and Git to connect to my Github account and then clone the newly created &lt;code&gt;&amp;lt;myusername&amp;gt;.github.io&lt;/code&gt; in my local directory. Then after making some simple changes to the template, cd into the project directory and run the following command:&lt;/p&gt;
