@@ -1342,7 +1342,28 @@
 <li>Github page also allows the use of custom domain name. I have a personal domain bought from <a href="https://www.squarespace.com/" target="_blank" rel="noopener">squarespace.com</a>. To use a custom domain properly, you have to go to your <code>&lt;username&gt;.github.io</code> repository, click <code>Settings</code>, find <code>Pages</code> from the menu on the left side, put down you custom domain name on the placeholder called <code>Custom domain</code>.</li>
 <li>Go to this <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank" rel="noopener">link</a> and you will find a list of 5 A numbers <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#:~:text=To%20create%20A%20records%2C%20point%20your%20apex%20domain%20to%20the%20IP%20addresses%20for%20GitHub%20Pages." target="_blank" rel="noopener">here</a>.</li>
 <li>Go to the DNS settings on your domain. Remove any preexisting default records from there. For Squarespace, there were some default prameters in the DNS settings, which I needed to remove first. Without removing those, the domain was not working properly.</li>
-<li>Add the A numbers there like below. Also add a CNAME record that points it to your github repository.</li>
+<li>Add the A numbers there like below. Also add a CNAME record that points it to your github repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://souravbhadra.com/post/hugo-blox-as-resume-website/dns-records.png" alt="dns-records" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</li>
 <li>Give it some time to perform the DNS check from github&rsquo;s end. Sometimes it may take few hours to do the check. Once the DNS check is successful, you should see your website live on the custom domain. Also make sure to check the <code>Enforce HTTPS</code> to enable extra layer of security.</li>
 </ul>
 <h2 id="final-remarks">Final remarks</h2>

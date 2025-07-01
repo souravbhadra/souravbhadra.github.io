@@ -84,6 +84,7 @@ Hugo is powerful tool for scientists and professionals to create beautiful websi
 - Go to this [link](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) and you will find a list of 5 A numbers [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#:~:text=To%20create%20A%20records%2C%20point%20your%20apex%20domain%20to%20the%20IP%20addresses%20for%20GitHub%20Pages.).
 - Go to the DNS settings on your domain. Remove any preexisting default records from there. For Squarespace, there were some default prameters in the DNS settings, which I needed to remove first. Without removing those, the domain was not working properly.
 - Add the A numbers there like below. Also add a CNAME record that points it to your github repository.
+  ![dns-records](https://souravbhadra.com/post/hugo-blox-as-resume-website/dns-records.png)
 - Give it some time to perform the DNS check from github's end. Sometimes it may take few hours to do the check. Once the DNS check is successful, you should see your website live on the custom domain. Also make sure to check the `Enforce HTTPS` to enable extra layer of security.
 
 ## Final remarks
