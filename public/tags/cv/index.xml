@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CV | Sourav Bhadra</title>
+    <link>http://localhost:1313/tags/cv/</link>
+      <atom:link href="http://localhost:1313/tags/cv/index.xml" rel="self" type="application/rss+xml" />
+    <description>CV</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu4172180860045846282.png</url>
+      <title>CV</title>
+      <link>http://localhost:1313/tags/cv/</link>
+    </image>
+    
+    <item>
+      <title>Create powerful portfolio websites using Hugoblox</title>
+      <link>http://localhost:1313/post/hugo-blox-as-resume-website/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/hugo-blox-as-resume-website/</guid>
+      <description>&lt;p&gt;Blas&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

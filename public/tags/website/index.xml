@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website | Sourav Bhadra</title>
+    <link>http://localhost:1313/tags/website/</link>
+      <atom:link href="http://localhost:1313/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    <description>Website</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu4172180860045846282.png</url>
+      <title>Website</title>
+      <link>http://localhost:1313/tags/website/</link>
+    </image>
+    
+    <item>
+      <title>Create powerful portfolio websites using Hugoblox</title>
+      <link>http://localhost:1313/post/hugo-blox-as-resume-website/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/hugo-blox-as-resume-website/</guid>
+      <description>&lt;p&gt;Blas&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
