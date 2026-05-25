@@ -21,7 +21,7 @@ const paragraphs = site.about.paragraphs as readonly AboutParagraph[];
   aria-labelledby="about-heading"
 >
   <h2 id="about-heading" class="section-heading">About</h2>
-  <div class="reveal-content mt-8 grid items-start gap-10">
+  <div class="reveal-content grid items-start gap-10">
     <div class="space-y-8 body-copy">
       {paragraphs.map((p) =>
         typeof p === 'string' ? (
@@ -41,7 +41,7 @@ const paragraphs = site.about.paragraphs as readonly AboutParagraph[];
             )}
             {p.heading && (
               <div class="space-y-2">
-                <p class="font-semibold text-white-soft">{p.heading}</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{p.heading}</p>
 
                 {p.bullets && (
                   <ul class="list-disc space-y-1 pl-5">
