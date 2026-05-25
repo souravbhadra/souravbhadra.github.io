@@ -17,10 +17,7 @@ export const site = {
   },
   hero: {
     name: 'Sourav Bhadra',
-    role: 'Data Scientist, Ph.D.',
-    tagline:
-      'I build end-to-end AI systems — from geospatial foundation models and generative AI to production MLOps — that turn complex, multimodal data into measurable business impact.',
-    contact: 'Open to senior data science and ML roles.',
+    tags: ['Deep Learning', 'Computer Vision', 'Geospatial AI', 'Remote Sensing', 'MLOps'],
     avatarSrc: '/avatar.jpg',
     avatarAlt: 'Sourav Bhadra',
   },
