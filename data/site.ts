@@ -58,6 +58,7 @@ export const site = {
       title: 'Data Scientist',
       company: 'Bayer Crop Science',
       companyUrl: 'https://www.bayer.com/en/',
+      location: 'St. Louis, MO',
       summary:
         'Develop and deploy machine learning models that predict crop phenotypes for breeding R&D, working across remote-sensing imagery, climate grids, and sensor-based tabular data.',
       highlights: [
@@ -72,6 +73,7 @@ export const site = {
       title: 'Graduate Research Scientist',
       company: 'Remote Sensing Lab, Saint Louis University',
       companyUrl: 'http://www.remotesensinglab.org/',
+      location: 'St. Louis, MO',
       summary:
         'Led deep-learning research for digital agriculture, fusing multi-sensor UAV and satellite data to estimate crop traits and yield.',
       highlights: [
@@ -88,6 +90,7 @@ export const site = {
       title: 'Research Assistant',
       company: 'GeoFEW Lab, Southern Illinois University',
       companyUrl: 'https://www.geofew.org/',
+      location: 'Carbondale, IL',
       summary:
         'Applied high-performance computing and deep learning to hydrologic connectivity and terrain analysis.',
       highlights: [
@@ -102,6 +105,7 @@ export const site = {
       title: 'GIS Analyst',
       company: 'Institute of Water Modeling',
       companyUrl: 'https://www.iwmbd.org/',
+      location: 'Dhaka, Bangladesh',
       summary:
         'Built geospatial data-processing pipelines supporting large-scale flood-management and hydrological engineering projects in Bangladesh.',
       highlights: [
