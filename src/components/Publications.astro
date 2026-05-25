@@ -1,0 +1,133 @@
+---
+import { site } from '@data/site';
+import { Icon } from 'astro-icon/components';
+
+const pubs = site.publications;
+const firstAuthor = pubs.filter((p) => p.firstAuthor);
+const collaborations = pubs.filter((p) => !p.firstAuthor);
+const total = pubs.length;
+const firstCount = firstAuthor.length;
+const NAME = 'S. Bhadra';
+---
+
+<section
+  id="publications"
+  class="mb-20 scroll-mt-24 lg:mb-24 lg:scroll-mt-8"
+  aria-labelledby="publications-heading"
+>
+  <h2 id="publications-heading" class="section-heading">Publications</h2>
+
+  <div class="mb-9 flex flex-wrap items-center gap-x-5 gap-y-3">
+    <p class="text-sm text-slate-light">
+      <span class="font-mono text-base text-accent">{total}</span> peer-reviewed publications
+      <span class="text-slate-lightest">·</span>
+      <span class="font-mono text-base text-accent">{firstCount}</span> first-author
+    </p>
+    <a
+      href={site.contact.scholar}
+      target="_blank"
+      rel="noreferrer"
+      class="inline-flex items-center gap-1.5 rounded-md border border-accent/30 px-3 py-1.5 text-sm text-accent transition hover:bg-accent/10"
+    >
+      <Icon name="ph:graduation-cap" class="h-4 w-4" /> Google Scholar
+    </a>
+  </div>
+
+  <h3 class="pub-subhead">Selected · First Author</h3>
+  <ol class="mt-4 grid gap-4 sm:grid-cols-2">
+    {firstAuthor.map((pub) => (
+      <li class="pub-item panel-card flex flex-col">
+        <div class="flex items-center justify-between gap-3">
+          <span class="font-mono text-xs text-accent">{pub.year}</span>
+          <span class="rounded-full border border-accent/25 px-2.5 py-0.5 text-[0.62rem] uppercase tracking-wider text-slate-lightest">
+            {pub.type}
+          </span>
+        </div>
+        <a
+          href={pub.link}
+          target="_blank"
+          rel="noreferrer"
+          class="mt-2 block font-semibold leading-snug text-slate transition hover:text-accent"
+        >
+          {pub.title}
+          {pub.featured && <Icon name="ph:star-fill" class="ml-1 inline-block h-3 w-3 align-baseline text-accent" />}
+        </a>
+        <p class="mt-2 text-sm text-slate-light">
+          {pub.authors.split(NAME).map((seg, i) => (
+            <>{i > 0 && <strong class="font-semibold text-slate">{NAME}</strong>}{seg}</>
+          ))}
+        </p>
+        <p class="mt-auto pt-2 text-sm italic text-slate-lightest">{pub.venue}</p>
+      </li>
+    ))}
+  </ol>
+
+  <h3 class="pub-subhead mt-12">Collaborations</h3>
+  <ol class="mt-4 space-y-4">
+    {collaborations.map((pub) => (
+      <li class="pub-item border-l border-accent/20 pl-4">
+        <a
+          href={pub.link}
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium leading-snug text-slate transition hover:text-accent"
+        >
+          {pub.title}
+        </a>
+        <p class="mt-1 text-xs text-slate-light">
+          {pub.authors.split(NAME).map((seg, i) => (
+            <>{i > 0 && <strong class="font-semibold text-slate">{NAME}</strong>}{seg}</>
+          ))}
+        </p>
+        <p class="mt-0.5 text-xs text-slate-lightest">
+          <span class="font-mono text-accent">{pub.year}</span> · {pub.venue} · {pub.type}
+        </p>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .pub-subhead {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .pub-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .pub-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  function revealPubs() {
+    const items = document.querySelectorAll('.pub-item');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Array.from(items).indexOf(entry.target);
+            setTimeout(() => entry.target.classList.add('reveal'), (index % 4) * 90);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -10px 0px' }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  }
+
+  revealPubs();
+  document.addEventListener('astro:after-swap', revealPubs);
+</script>
