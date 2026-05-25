@@ -176,41 +176,133 @@ export const site = {
   ],
   featuredProjects: [
     {
-      title: 'Lumen Studio Website',
-      period: '2025',
-      summary: 'Built a polished portfolio experience with accessible UI, motion-led interactions, and reusable components.',
-      solution: 'Designed a modular component system with Astro and Tailwind CSS, ensuring consistent brand experience across all breakpoints.',
-      impact: 'Achieved sub-1s page load metrics and 95+ Lighthouse scores through optimized asset delivery and lazy loading strategies.',
-      image: 'astro-01.webp',
-      imageAlt: 'Lumen Studio website showcase',
+      title: 'Raster4ML',
+      period: 'Open Source · 2022',
+      badge: '120+ ★ on GitHub',
+      summary:
+        'Bringing satellite and drone imagery into a machine-learning workflow means hand-coding vegetation indices, stacking bands, and extracting zonal statistics — slow, error-prone boilerplate that demands deep geospatial expertise.',
+      solution:
+        'A Python library that automates the entire feature-extraction pipeline: stack rasters, compute 350+ vegetation indices, and extract statistics over shapefile geometries in a few lines of code, built on GDAL, Rasterio, and GeoPandas.',
+      impact:
+        'Adopted across the geospatial-ML community with 120+ GitHub stars and full ReadTheDocs documentation, lowering the barrier to remote-sensing ML for researchers and practitioners.',
+      image: 'img/raster4ml.png',
+      imageAlt: 'Raster4ML vegetation-index map output',
+      links: [
+        { label: 'GitHub', href: 'https://github.com/souravbhadra/raster4ml', icon: 'ph:github-logo' },
+        { label: 'Docs', href: 'https://raster4ml.readthedocs.io/', icon: 'ph:book-open' },
+      ],
       techCategories: [
-        {
-          category: 'Frontend',
-          items: ['TypeScript', 'Astro', 'Tailwind CSS', 'Responsive Design'],
-        },
-        {
-          category: 'Performance',
-          items: ['Asset Optimization', 'Lazy Loading', 'Image CDN'],
-        },
+        { category: 'Core', items: ['Python', 'NumPy', 'Pandas'] },
+        { category: 'Geospatial', items: ['GDAL', 'Rasterio', 'GeoPandas', 'Shapely'] },
       ],
     },
     {
-      title: 'Nova Launch Marketing Platform',
-      period: '2024',
-      summary: 'Delivered a modular marketing site and interactive product showcase for a launch-ready SaaS brand.',
-      solution: 'Implemented a content-driven architecture with reusable card components and dynamic project pages, enabling non-technical content updates.',
-      impact: 'Reduced content update time by 80% through intuitive component-based structure; enabled marketing team independence.',
-      image: 'astro-02.jpeg',
-      imageAlt: 'Nova Launch platform interface',
+      title: 'Peak Fall Color',
+      period: 'Generative AI · 2025',
+      badge: 'Live demo',
+      icon: 'ph:leaf',
+      summary:
+        'Travelers and leaf-peepers lack timely, location-specific forecasts of when fall foliage will peak — static seasonal calendars miss the spatial and year-to-year variation.',
+      solution:
+        'An interactive platform that predicts peak-foliage timing across the continental US from MODIS satellite time series using deep-learning transformers, served through a React/Leaflet map with a Gemini function-calling RAG chatbot for natural-language queries.',
+      impact:
+        'Turns satellite phenology science into a consumer-facing product — a full-stack showcase of generative AI, retrieval-augmented reasoning, and geospatial ML in one shipped application.',
+      links: [{ label: 'Live demo', href: 'https://www.peakfallcolor.com/', icon: 'ph:arrow-square-out' }],
       techCategories: [
-        {
-          category: 'Frontend',
-          items: ['Astro', 'TypeScript', 'Tailwind CSS'],
-        },
-        {
-          category: 'Developer Experience',
-          items: ['Vite', 'ESLint', 'Automated Testing'],
-        },
+        { category: 'ML / AI', items: ['Transformers', 'MODIS NDVI', 'Gemini Function Calling', 'RAG'] },
+        { category: 'Full Stack', items: ['React', 'FastAPI', 'Leaflet'] },
+      ],
+    },
+    {
+      title: 'SustaiN',
+      period: 'Applied Research · 2022',
+      badge: '$15K USDA SARE grant',
+      icon: 'ph:plant',
+      summary:
+        'Over- and under-applying nitrogen costs farmers money and pollutes waterways; growers lack field-specific, in-season guidance on how much nitrogen to apply.',
+      solution:
+        'A decision-support web app that fuses PlanetScope satellite imagery with gridMET weather data to generate in-season nitrogen prescription maps for corn and sorghum at field scale.',
+      impact:
+        'Funded by a $15,000 USDA SARE grant and built with Illinois Corn Growers (ILCORN) and the Donald Danforth Plant Science Center to raise farmer profitability while cutting nitrogen loss.',
+      links: [
+        { label: 'Live site', href: 'https://sustaincrops.net/', icon: 'ph:arrow-square-out' },
+        { label: 'GitHub', href: 'https://github.com/souravbhadra/sustain', icon: 'ph:github-logo' },
+      ],
+      techCategories: [
+        { category: 'Data & ML', items: ['PlanetScope', 'gridMET', 'scikit-learn'] },
+        { category: 'Geospatial / App', items: ['GDAL', 'Rasterio', 'GeoPandas', 'Streamlit'] },
+      ],
+    },
+    {
+      title: 'MapLapse',
+      period: 'Open Source · 2022',
+      badge: 'PyPI package',
+      summary:
+        "Static maps can't show how a region changes over time — building animated geospatial timelapses from scratch takes substantial matplotlib and GeoPandas plumbing.",
+      solution:
+        'A Python library that turns a shapefile and a time-indexed dataset into animated choropleth or proportional-circle maps (GIF/MP4) with a single animate() call.',
+      impact:
+        'Packaged on PyPI with ReadTheDocs docs, giving data scientists a reusable one-liner for temporal map storytelling.',
+      image: 'img/maplapse.gif',
+      imageAlt: 'Animated choropleth of US corn yield over time',
+      links: [{ label: 'GitHub', href: 'https://github.com/souravbhadra/maplapse', icon: 'ph:github-logo' }],
+      techCategories: [
+        { category: 'Core', items: ['Python', 'Matplotlib'] },
+        { category: 'Geospatial', items: ['GeoPandas', 'Shapely', 'Fiona'] },
+      ],
+    },
+    {
+      title: 'AgLapse',
+      period: 'Open Source · 2022',
+      badge: 'Interactive app',
+      icon: 'ph:chart-line-up',
+      summary:
+        'Understanding how US crop production shifts across counties and decades is hard to see in spreadsheets and static USDA reports.',
+      solution:
+        'A Streamlit web app that maps spatiotemporal trends for four major crops across US counties (1910–2021), combining USDA NASS statistics with Census TIGER boundaries and on-the-fly trend (slope) analysis.',
+      impact:
+        'A deployed, interactive tool that makes a century of agricultural data explorable for researchers and policymakers.',
+      links: [
+        { label: 'Live app', href: 'https://souravbhadra-ag-lapse-ag-lapse-app-1l9sgf.streamlit.app/', icon: 'ph:arrow-square-out' },
+        { label: 'GitHub', href: 'https://github.com/souravbhadra/ag-lapse', icon: 'ph:github-logo' },
+      ],
+      techCategories: [
+        { category: 'Data', items: ['USDA NASS', 'Census TIGER', 'Pandas', 'SciPy'] },
+        { category: 'App / Geospatial', items: ['Streamlit', 'GeoPandas', 'Folium'] },
+      ],
+    },
+    {
+      title: 'PROSAIL-Net',
+      period: 'Research · ISPRS J. P&RS, 2024',
+      badge: 'Peer-reviewed',
+      icon: 'ph:flask',
+      summary:
+        'Estimating crop biophysical traits (leaf chlorophyll, leaf angle) from hyperspectral imagery with pure deep learning generalizes poorly across fields and seasons because labeled data is scarce.',
+      solution:
+        'A physics-informed, dual-stream neural network that embeds the PROSAIL radiative-transfer model into transfer learning, jointly estimating leaf chlorophyll and leaf angle from UAV hyperspectral images.',
+      impact:
+        'Improved cross-environment generalization of trait estimation by ~25%, published as first author in the ISPRS Journal of Photogrammetry & Remote Sensing.',
+      links: [{ label: 'Read paper', href: 'https://www.sciencedirect.com/science/article/pii/S0924271624000650', icon: 'ph:file-text' }],
+      techCategories: [
+        { category: 'Methods', items: ['Transfer Learning', 'PROSAIL RTM', 'Dual-Stream NN'] },
+        { category: 'Stack', items: ['PyTorch', 'Hyperspectral', 'UAV'] },
+      ],
+    },
+    {
+      title: 'Plot-Scale Yield with 3D CNNs',
+      period: 'Research · Precision Agriculture, 2023',
+      badge: 'Peer-reviewed',
+      icon: 'ph:cube',
+      summary:
+        'Predicting soybean yield early and at plot scale requires capturing how the crop develops over the season, not just a single snapshot — a spatiotemporal problem classical features handle poorly.',
+      solution:
+        'An end-to-end 3D CNN (ResNet/DenseNet) trained on multi-temporal UAV RGB imagery, with the full training-and-inference pipeline scaled from a local GPU cluster onto AWS SageMaker.',
+      impact:
+        'Delivered accurate plot-scale yield prediction and demonstrated the value of temporal data over single-date imagery; published as first author in Precision Agriculture.',
+      links: [{ label: 'Read paper', href: 'https://doi.org/10.1007/s11119-023-10096-8', icon: 'ph:file-text' }],
+      techCategories: [
+        { category: 'Methods', items: ['3D CNN', 'ResNet / DenseNet', 'Spatiotemporal DL'] },
+        { category: 'Stack', items: ['PyTorch', 'AWS SageMaker', 'UAV RGB'] },
       ],
     },
   ],
@@ -236,4 +328,19 @@ export const site = {
 } as const;
 
 export type ProjectArchiveRow = (typeof site.projectArchive)[number];
-export type FeaturedProject = (typeof site.featuredProjects)[number];
+
+export type ProjectLink = { label: string; href: string; icon?: string };
+
+export type FeaturedProject = {
+  title: string;
+  period?: string;
+  badge?: string;
+  icon?: string;
+  image?: string;
+  imageAlt?: string;
+  summary: string;
+  solution?: string;
+  impact?: string;
+  links?: readonly ProjectLink[];
+  techCategories: readonly { category: string; items: readonly string[] }[];
+};

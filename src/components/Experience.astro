@@ -12,13 +12,9 @@ import { site } from '../../data/site';
           <div class="space-y-3">
             <h3 class="text-base font-semibold text-slate uppercase">
               {item.title} ·{' '}
-              {'companyUrl' in item && item.companyUrl ? (
-                <a href={item.companyUrl} class="subtle-link" target="_blank" rel="noreferrer">
-                  {item.company}
-                </a>
-              ) : (
-                item.company
-              )}
+              <a href={item.companyUrl} class="subtle-link" target="_blank" rel="noreferrer">
+                {item.company}
+              </a>
             </h3>
             <p class="body-copy">{item.summary}</p>
             <ul class="list-disc space-y-1 pl-5 text-sm text-slate">
