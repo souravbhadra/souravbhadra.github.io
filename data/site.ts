@@ -469,18 +469,6 @@ export const site = {
       link: 'https://doi.org/10.3390/s21030742',
     },
   ],
-  projectArchivePage: {
-    title: 'All projects',
-    description: 'Project archive: dates, roles, and technologies across representative engagements.',
-    intro: 'A concise archive of engagements and representative work.',
-  },
-  projectArchive: [
-    { date: '2025', project: 'Design system rollout', role: 'Frontend', techStack: 'Astro, CSS, Storybook' },
-    { date: '2024', project: 'Checkout reliability', role: 'Full-stack', techStack: 'TypeScript, Postgres, Redis' },
-    { date: '2024', project: 'Auth hardening', role: 'Backend', techStack: 'OAuth2, JWT, rate limits' },
-    { date: '2023', project: 'Analytics pipeline', role: 'Data', techStack: 'SQL, dbt, warehouse' },
-    { date: '2023', project: 'Mobile web refresh', role: 'Frontend', techStack: 'HTML, CSS, a11y audits' },
-  ],
   contact: {
     email: 'sbhadra019@gmail.com',
     github: 'https://github.com/souravbhadra',
@@ -489,8 +477,6 @@ export const site = {
     orcid: 'https://orcid.org/0000-0002-5832-4695',
   },
 } as const;
-
-export type ProjectArchiveRow = (typeof site.projectArchive)[number];
 
 export type ProjectLink = { label: string; href: string; icon?: string };
 
