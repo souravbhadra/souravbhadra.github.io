@@ -114,6 +114,66 @@ export const site = {
       tech: ['Python', 'ArcPy', 'Google Earth Engine', 'eCognition', 'ERDAS Imagine'],
     },
   ],
+  education: [
+    {
+      period: '2019 — 2023',
+      degree: 'Ph.D. in Geoinformatics & Geospatial Analytics',
+      institution: 'Saint Louis University',
+      institutionUrl: 'https://www.slu.edu/',
+      location: 'St. Louis, MO',
+      thesis: {
+        label: 'Dissertation',
+        title:
+          'Informed AI for Food Insecurity: Applications of Remote Sensing, Neural Networks and Transfer Learning for Digital Agricultural Monitoring',
+        link: 'https://www.proquest.com/openview/adcfadc50701acea422e18dba05c33ed/1?pq-origsite=gscholar&cbl=18750&diss=y',
+      },
+      highlights: [
+        'Dissertation produced 3 first-author journal articles and 1 peer-reviewed conference proceeding.',
+        'Invited talks at NAPPN, AGU, and AAG.',
+      ],
+    },
+    {
+      period: '2017 — 2019',
+      degree: "M.Sc. in Geography & Environmental Resources",
+      institution: 'Southern Illinois University Carbondale',
+      institutionUrl: 'https://siu.edu/',
+      location: 'Carbondale, IL',
+      thesis: {
+        label: 'Thesis',
+        title:
+          'Assessing the Impacts of Anthropogenic Drainage Structures on Hydrologic Connectivity Using High-Resolution Digital Elevation Models',
+        link: 'https://opensiuc.lib.siu.edu/theses/2573/',
+      },
+      highlights: ["Recognized with the David G. Arey Memorial Award for the best Master's thesis."],
+    },
+    {
+      period: '2011 — 2015',
+      degree: 'Bachelor of Urban & Regional Planning',
+      institution: 'Khulna University of Engineering & Technology',
+      institutionUrl: 'https://www.kuet.ac.bd/',
+      location: 'Khulna, Bangladesh',
+    },
+  ],
+  awards: [
+    {
+      name: 'David G. Arey Memorial Award',
+      year: '2020',
+      awarder: 'Southern Illinois University Carbondale',
+      note: "Awarded for a Master's thesis demonstrating creative thinking in natural-resource and environmental problem solving.",
+    },
+    {
+      name: 'Ben Dziegielewski Scholarship',
+      year: '2018',
+      awarder: 'Dept. of Geography & Environmental Resources, SIUC',
+      note: "Awarded for the highest GPA in the first year of the master's program.",
+    },
+    {
+      name: '3-Minute Thesis — Runner-Up',
+      year: '2022',
+      awarder: 'Saint Louis University',
+      note: 'Second place university-wide for the talk "Fighting Food Insecurity by Seeing the Unseen."',
+    },
+  ],
   featuredProjects: [
     {
       title: 'Lumen Studio Website',
