@@ -16,28 +16,42 @@ export const site = {
       'Sourav Bhadra, Ph.D. — Data Scientist specializing in foundation models, generative AI, computer vision, and geospatial machine learning, building production ML systems that drive measurable business impact.',
   },
   hero: {
-    name: 'Alex Morgan',
-    role: 'Full-stack engineer',
-    tagline: 'From product intent to production — pragmatic systems, accessible UI, and maintainable code.',
-    contact: 'Open to collaborations and senior IC roles on product-minded teams.',
-    avatarSrc: '/favicon.svg',
-    avatarAlt: 'Alex Morgan',
+    name: 'Sourav Bhadra',
+    role: 'Data Scientist, Ph.D.',
+    tagline:
+      'I build end-to-end AI systems — from geospatial foundation models and generative AI to production MLOps — that turn complex, multimodal data into measurable business impact.',
+    contact: 'Open to senior data science and ML roles.',
+    avatarSrc: '/avatar.jpg',
+    avatarAlt: 'Sourav Bhadra',
   },
   about: {
     paragraphs: [
-      'A brief, compelling introduction about who you are and what you do. Mention your core philosophy, your passion for building digital products, and your drive for creating efficient, high-impact solutions.',
-      'I care about clear boundaries between modules, automated checks in CI, and documentation that helps the next contributor ship safely.',
+      "I'm a data scientist with a Ph.D. in geospatial analytics and 6+ years turning messy, multimodal data — satellite and drone imagery, sensors, weather, and genetics — into decisions that move the business. I own problems end to end: framing them with stakeholders, building the models, and shipping them to production.",
+      "My edge is connecting deep technical work to outcomes. I've built geospatial foundation models, fine-tuned diffusion models for image super-resolution, and stood up cloud-native ML pipelines that run across continents — always anchored to a measurable result, whether that's wider prediction coverage, higher out-of-distribution accuracy, or faster R&D cycles.",
       {
-        heading: 'Example focus areas',
+        heading: 'What I focus on',
         bullets: [
-          'Designing APIs and client boundaries with typed contracts',
-          'Performance budgets, caching, and pragmatic observability',
-          'Shipping incrementally with feature flags and rollback-friendly deploys',
+          'Foundation models & generative AI — masked autoencoders, diffusion, transfer learning',
+          'Computer vision & multimodal sensor fusion — hyperspectral, thermal, LiDAR, RGB',
+          'Remote-sensing ML at planet scale — satellite and UAV imagery',
+          'Production MLOps — cloud pipelines, orchestration, CI/CD, monitoring',
         ],
       },
       {
-        heading: 'Sample stack',
-        techItems: ['TypeScript', 'Astro', 'Tailwind CSS', 'Node', 'Vitest'],
+        heading: 'Languages',
+        techItems: ['Python', 'SQL', 'R', 'Bash'],
+      },
+      {
+        heading: 'ML / Deep Learning',
+        techItems: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'CNNs', 'Vision Transformers', 'LSTMs', 'Diffusion Models'],
+      },
+      {
+        heading: 'Geospatial & Remote Sensing',
+        techItems: ['GDAL', 'Rasterio', 'GeoPandas', 'Xarray', 'Google Earth Engine', 'QGIS', 'ArcGIS', 'STAC / COG'],
+      },
+      {
+        heading: 'Cloud & MLOps',
+        techItems: ['AWS SageMaker', 'AWS S3 / Lambda', 'GCP BigQuery', 'Apache Airflow', 'Kafka', 'Docker', 'GitHub Actions'],
       },
     ],
   },
@@ -135,9 +149,11 @@ export const site = {
     { date: '2023', project: 'Mobile web refresh', role: 'Frontend', techStack: 'HTML, CSS, a11y audits' },
   ],
   contact: {
-    email: 'hello@example.com',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
+    email: 'sbhadra019@gmail.com',
+    github: 'https://github.com/souravbhadra',
+    linkedin: 'https://www.linkedin.com/in/bhadrasourav/',
+    scholar: 'https://scholar.google.com/citations?user=twDNDo0AAAAJ&hl=en',
+    orcid: 'https://orcid.org/0000-0002-5832-4695',
   },
 } as const;
 
