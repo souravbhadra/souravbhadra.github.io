@@ -9,11 +9,11 @@
  */
 
 export const site = {
-  url: 'https://example.com',
+  url: 'https://souravbhadra.com',
   meta: {
-    title: 'Alex Morgan | Full-stack engineer',
+    title: 'Sourav Bhadra, Ph.D. | Data Scientist',
     description:
-      'Portfolio example: shipping reliable web products with clear architecture, tests, and delivery practices.',
+      'Sourav Bhadra, Ph.D. — Data Scientist specializing in foundation models, generative AI, computer vision, and geospatial machine learning, building production ML systems that drive measurable business impact.',
   },
   hero: {
     name: 'Alex Morgan',
