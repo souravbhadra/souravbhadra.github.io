@@ -1,0 +1,30 @@
+---
+import type { FeaturedProject } from '../../data/site';
+import ProjectCard from './ProjectCard.astro';
+
+interface Props {
+  projects: readonly FeaturedProject[];
+}
+
+const { projects } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<section
+  id="projects"
+  class="mb-24 scroll-mt-24 lg:mb-32 lg:scroll-mt-8"
+  aria-labelledby="projects-heading"
+>
+  <h2 id="projects-heading" class="section-heading">Projects</h2>
+  <p class="mb-10 max-w-prose body-copy">
+    Open-source tools and applied research — each framed as the problem it
+    solved, the approach, and the impact.
+  </p>
+  <div class="space-y-20">
+    {projects.map((project) => (
+      <ProjectCard project={project} imageSrc={project.image ? `${base}${project.image}` : undefined} />
+    ))}
+  </div>
+</section>

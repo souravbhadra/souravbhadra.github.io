@@ -1,0 +1,139 @@
+---
+import type { FeaturedProject } from '../../data/site';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  project: FeaturedProject;
+  imageSrc?: string;
+}
+
+const { project, imageSrc: imageOverride } = Astro.props;
+
+const techCategories = project.techCategories;
+const imageSrc = imageOverride ?? (project.image ? (project.image.startsWith('/') ? project.image : `/${project.image}`) : undefined);
+const fallbackIcon = project.icon ?? 'ph:folder-open';
+---
+
+<article class="scroll-stat panel-card group space-y-6">
+  <header class="space-y-2">
+    <div class="flex flex-wrap items-center gap-3">
+      <h3 class="text-2xl font-semibold text-slate">{project.title}</h3>
+      {project.badge && (
+        <span class="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+          {project.badge}
+        </span>
+      )}
+    </div>
+    {project.period && <p class="font-mono text-sm text-accent">{project.period}</p>}
+  </header>
+
+  {imageSrc ? (
+    <div class="w-full max-w-3xl overflow-hidden rounded-xl border border-white/5">
+      <img
+        src={imageSrc}
+        alt={project.imageAlt ?? ''}
+        class="h-56 w-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  ) : (
+    <div class="flex h-32 w-full max-w-3xl items-center justify-center rounded-xl border border-accent/20 bg-gradient-to-br from-accent/15 via-accent/5 to-transparent">
+      <Icon name={fallbackIcon} class="h-12 w-12 text-accent/70" />
+    </div>
+  )}
+
+  <dl class="space-y-4">
+    <div>
+      <dt class="text-xs uppercase tracking-wider text-accent">Problem</dt>
+      <dd class="mt-1.5 body-copy">{project.summary}</dd>
+    </div>
+    {project.solution && (
+      <div>
+        <dt class="text-xs uppercase tracking-wider text-accent">Solution</dt>
+        <dd class="mt-1.5 text-slate">{project.solution}</dd>
+      </div>
+    )}
+    {project.impact && (
+      <div>
+        <dt class="text-xs uppercase tracking-wider text-accent">Impact</dt>
+        <dd class="mt-1.5 text-slate">{project.impact}</dd>
+      </div>
+    )}
+  </dl>
+
+  <div>
+    <p class="mb-3 text-xs uppercase tracking-wider text-accent">Tools</p>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {techCategories.map((techCat) => (
+        <div>
+          <h4 class="mb-2 text-xs uppercase tracking-wider text-slate-lightest">
+            {techCat.category}
+          </h4>
+          <ul class="space-y-1">
+            {techCat.items.map((item) => (
+              <li class="text-sm text-slate-light">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {project.links && project.links.length > 0 && (
+    <div class="flex flex-wrap gap-3 pt-1">
+      {project.links.map((link) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-md border border-accent/30 px-3 py-1.5 text-sm text-accent transition hover:bg-accent/10"
+        >
+          {link.icon && <Icon name={link.icon} class="h-4 w-4" />}
+          {link.label}
+        </a>
+      ))}
+    </div>
+  )}
+</article>
+
+<style>
+  .scroll-stat {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-stat.reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+</style>
+
+<script>
+  function revealCards() {
+    const cards = document.querySelectorAll('.scroll-stat');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(cards).indexOf(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('reveal');
+          }, (index % 3) * 150); 
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -10px 0px'
+    });
+
+    cards.forEach(card => observer.observe(card));
+  }
+
+  revealCards();
+  
+  document.addEventListener('astro:after-swap', revealCards);
+</script>
