@@ -186,8 +186,9 @@ export const site = {
         'A Python library that automates the entire feature-extraction pipeline: stack rasters, compute 350+ vegetation indices, and extract statistics over shapefile geometries in a few lines of code, built on GDAL, Rasterio, and GeoPandas.',
       impact:
         'Adopted across the geospatial-ML community with 120+ GitHub stars and full ReadTheDocs documentation, lowering the barrier to remote-sensing ML for researchers and practitioners.',
-      image: 'img/raster4ml.png',
-      imageAlt: 'Raster4ML vegetation-index map output',
+      image: 'img/raster4ml_logo.png',
+      imageAlt: 'Raster4ML logo',
+      imageStyle: 'contain',
       links: [
         { label: 'GitHub', href: 'https://github.com/souravbhadra/raster4ml', icon: 'ph:github-logo' },
         { label: 'Docs', href: 'https://raster4ml.readthedocs.io/', icon: 'ph:book-open' },
@@ -208,6 +209,8 @@ export const site = {
         'An interactive platform that predicts peak-foliage timing across the continental US from MODIS satellite time series using deep-learning transformers, served through a React/Leaflet map with a Gemini function-calling RAG chatbot for natural-language queries.',
       impact:
         'Turns satellite phenology science into a consumer-facing product — a full-stack showcase of generative AI, retrieval-augmented reasoning, and geospatial ML in one shipped application.',
+      image: 'img/peakfallcolor.png',
+      imageAlt: 'Peak Fall Color map interface',
       links: [{ label: 'Live demo', href: 'https://www.peakfallcolor.com/', icon: 'ph:arrow-square-out' }],
       techCategories: [
         { category: 'ML / AI', items: ['Transformers', 'MODIS NDVI', 'Gemini Function Calling', 'RAG'] },
@@ -225,6 +228,9 @@ export const site = {
         'A decision-support web app that fuses PlanetScope satellite imagery with gridMET weather data to generate in-season nitrogen prescription maps for corn and sorghum at field scale.',
       impact:
         'Funded by a $15,000 USDA SARE grant and built with Illinois Corn Growers (ILCORN) and the Donald Danforth Plant Science Center to raise farmer profitability while cutting nitrogen loss.',
+      image: 'img/sustain_logo.png',
+      imageAlt: 'SustaiN logo',
+      imageStyle: 'contain',
       links: [
         { label: 'Live site', href: 'https://sustaincrops.net/', icon: 'ph:arrow-square-out' },
         { label: 'GitHub', href: 'https://github.com/souravbhadra/sustain', icon: 'ph:github-logo' },
@@ -244,8 +250,9 @@ export const site = {
         'A Python library that turns a shapefile and a time-indexed dataset into animated choropleth or proportional-circle maps (GIF/MP4) with a single animate() call.',
       impact:
         'Packaged on PyPI with ReadTheDocs docs, giving data scientists a reusable one-liner for temporal map storytelling.',
-      image: 'img/maplapse.gif',
-      imageAlt: 'Animated choropleth of US corn yield over time',
+      image: 'img/maplapse_logo.gif',
+      imageAlt: 'MapLapse logo',
+      imageStyle: 'contain',
       links: [{ label: 'GitHub', href: 'https://github.com/souravbhadra/maplapse', icon: 'ph:github-logo' }],
       techCategories: [
         { category: 'Core', items: ['Python', 'Matplotlib'] },
@@ -488,6 +495,7 @@ export type FeaturedProject = {
   icon?: string;
   image?: string;
   imageAlt?: string;
+  imageStyle?: 'cover' | 'contain';
   summary: string;
   solution?: string;
   impact?: string;

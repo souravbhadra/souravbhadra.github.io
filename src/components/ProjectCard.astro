@@ -28,11 +28,11 @@ const fallbackIcon = project.icon ?? 'ph:folder-open';
   </header>
 
   {imageSrc ? (
-    <div class="w-full max-w-3xl overflow-hidden rounded-xl border border-white/5">
+    <div class={`w-full max-w-3xl overflow-hidden rounded-xl border border-white/5 ${project.imageStyle === 'contain' ? 'bg-white/5 p-4' : ''}`}>
       <img
         src={imageSrc}
         alt={project.imageAlt ?? ''}
-        class="h-56 w-full object-cover"
+        class={`w-full ${project.imageStyle === 'contain' ? 'h-40 object-contain' : 'h-56 object-cover'}`}
         loading="lazy"
         decoding="async"
       />
