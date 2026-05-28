@@ -58,6 +58,8 @@ export const site = {
       title: 'Data Scientist',
       company: 'Bayer Crop Science',
       companyUrl: 'https://www.bayer.com/en/',
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_Bayer.svg',
+      logoWhiteBg: false,
       location: 'St. Louis, MO',
       summary:
         'Develop and deploy machine learning models that predict crop phenotypes for breeding R&D, working across remote-sensing imagery, climate grids, and sensor-based tabular data.',
@@ -73,6 +75,8 @@ export const site = {
       title: 'Graduate Research Scientist',
       company: 'Remote Sensing Lab, Saint Louis University',
       companyUrl: 'http://www.remotesensinglab.org/',
+      logoUrl: 'https://www.remotesensinglab.org/uploads/4/4/9/5/44953707/slu-rsl-logo.png',
+      logoWhiteBg: true,
       location: 'St. Louis, MO',
       summary:
         'Led deep-learning research for digital agriculture, fusing multi-sensor UAV and satellite data to estimate crop traits and yield.',
@@ -90,6 +94,8 @@ export const site = {
       title: 'Research Assistant',
       company: 'GeoFEW Lab, Southern Illinois University',
       companyUrl: 'https://www.geofew.org/',
+      logoUrl: 'https://siu.edu/_common/images/homepage/saluki-dawg-maroon-500.svg',
+      logoWhiteBg: false,
       location: 'Carbondale, IL',
       summary:
         'Applied high-performance computing and deep learning to hydrologic connectivity and terrain analysis.',
@@ -105,6 +111,8 @@ export const site = {
       title: 'GIS Analyst',
       company: 'Institute of Water Modeling',
       companyUrl: 'https://www.iwmbd.org/',
+      logoUrl: 'https://www.iwmbd.org/assets/uploads/home/hero/iwm2024.png',
+      logoWhiteBg: true,
       location: 'Dhaka, Bangladesh',
       summary:
         'Built geospatial data-processing pipelines supporting large-scale flood-management and hydrological engineering projects in Bangladesh.',
