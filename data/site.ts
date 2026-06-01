@@ -11,9 +11,9 @@
 export const site = {
   url: 'https://souravbhadra.com',
   meta: {
-    title: 'Sourav Bhadra, Ph.D. | Data Scientist',
+    title: 'Sourav Bhadra',
     description:
-      'Sourav Bhadra, Ph.D. — Data Scientist specializing in foundation models, generative AI, computer vision, and geospatial machine learning, building production ML systems that drive measurable business impact.',
+      'Sourav Bhadra, Ph.D. — Geospatial Data Scientist building deep-learning systems that fuse drone, satellite, and sensor data into stakeholder outcomes.',
   },
   hero: {
     name: 'Sourav Bhadra',
@@ -23,32 +23,15 @@ export const site = {
   },
   about: {
     paragraphs: [
-      "I'm a data scientist with a Ph.D. in geospatial analytics and 6+ years turning messy, multimodal data — satellite and drone imagery, sensors, weather, and genetics — into decisions that move the business. I own problems end to end: framing them with stakeholders, building the models, and shipping them to production.",
-      "My edge is connecting deep technical work to outcomes. I've built geospatial foundation models, fine-tuned diffusion models for image super-resolution, and stood up cloud-native ML pipelines that run across continents — always anchored to a measurable result, whether that's wider prediction coverage, higher out-of-distribution accuracy, or faster R&D cycles.",
+      "👋👋👋 Hello! I'm an ML researcher and geospatial data scientist with 6+ years experience in turning multimodal data into outcomes that move both the business and the science. My home turf is deep-learning-based data fusion ranging from handheld cameras, ground robots, drones, to satellites with explainability built in from the start.",
+      "Across every domain I've worked in, I keep stakeholders at the center. The win isn't the shiniest architecture, it's the outcome the people on the other side actually need. That's what decides which models I build, which I walk away from, and how I measure success.",
+      "Outside of work, I'm a husband, a father to a toddler, and a lifelong learner. I love learning new things, building things, and sharing what I learn with others. I'm also a big fan of traveling, cooking, and trying new foods. I also play guitar and sing sometimes.",
       {
-        heading: 'What I focus on',
+        heading: 'Currently exploring',
         bullets: [
-          'Foundation models & generative AI — masked autoencoders, diffusion, transfer learning',
-          'Computer vision & multimodal sensor fusion — hyperspectral, thermal, LiDAR, RGB',
-          'Remote-sensing ML at planet scale — satellite and UAV imagery',
-          'Production MLOps — cloud pipelines, orchestration, CI/CD, monitoring',
+          'Agentic AI for the coding workflows, personal knowledge management, and small automations that compound.',
+          "Geospatial foundation models; their uses, how to fine-tune them for specific cases, and how to bridge them with LLMs (which they don't slot into naturally). Most of my experiments live in agriculture, but the questions generalize to other domains.",
         ],
-      },
-      {
-        heading: 'Languages',
-        techItems: ['Python', 'SQL', 'R', 'Bash'],
-      },
-      {
-        heading: 'ML / Deep Learning',
-        techItems: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'CNNs', 'Vision Transformers', 'LSTMs', 'Diffusion Models'],
-      },
-      {
-        heading: 'Geospatial & Remote Sensing',
-        techItems: ['GDAL', 'Rasterio', 'GeoPandas', 'Xarray', 'Google Earth Engine', 'QGIS', 'ArcGIS', 'STAC / COG'],
-      },
-      {
-        heading: 'Cloud & MLOps',
-        techItems: ['AWS SageMaker', 'AWS S3 / Lambda', 'GCP BigQuery', 'Apache Airflow', 'Kafka', 'Docker', 'GitHub Actions'],
       },
     ],
   },
@@ -58,33 +41,46 @@ export const site = {
       title: 'Data Scientist',
       company: 'Bayer Crop Science',
       companyUrl: 'https://www.bayer.com/en/',
-      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_Bayer.svg',
-      logoWhiteBg: false,
+      logoUrl: '/img/logos/bayer.svg',
       location: 'St. Louis, MO',
       summary:
         'Develop and deploy machine learning models that predict crop phenotypes for breeding R&D, working across remote-sensing imagery, climate grids, and sensor-based tabular data.',
       highlights: [
-        'Build end-to-end ML pipelines — from model development and validation to deployment and maintenance — using automated, cloud-native workflows.',
-        'Prototype proof-of-concept solutions with cutting-edge sensors, the newest satellites, and modern model architectures to accelerate breeding cycles.',
+        'Replaced manual phenotyping at production scale by building end-to-end ML pipelines — from model development and validation through deployment and maintenance — on automated, cloud-native workflows.',
+        'Shaped sensor and satellite adoption decisions by prototyping proof-of-concept solutions with cutting-edge sensors, the newest satellites, and modern model architectures.',
         'Partner with cross-functional stakeholders to translate research and business objectives into deployable data science solutions.',
       ],
       tech: ['PyTorch', 'TensorFlow', 'Rasterio', 'GDAL', 'GeoPandas', 'BigQuery', 'AWS', 'Airflow', 'Docker'],
+    },
+    {
+      period: '2024 — 2024',
+      title: 'Adjunct Professor',
+      company: 'Saint Louis University',
+      companyUrl: 'https://www.slu.edu/science-and-engineering/academics/earth-environmental-geospatial-science/index.php',
+      logoUrl: '/img/logos/slu.png',
+      location: 'St. Louis, MO',
+      summary:
+        'Designed and taught a graduate-level Geospatial Analytics course (GIS 5120) at Saint Louis University.',
+      highlights: [
+        'Designed and taught Geospatial Analytics, a graduate-level course covering spatial statistics, image analysis, and large-scale geospatial visualization, to 20+ graduate students within the broader context of geospatial data science.',
+        'Full course materials and lecture notes are publicly available on the [course website](https://souravbhadra.com/GIS5120/intro.html).',
+      ],
+      tech: ['Python', 'GeoPandas', 'Rasterio', 'ArcGIS', 'Google Earth Engine'],
     },
     {
       period: '2019 — 2023',
       title: 'Graduate Research Scientist',
       company: 'Remote Sensing Lab, Saint Louis University',
       companyUrl: 'http://www.remotesensinglab.org/',
-      logoUrl: 'https://www.remotesensinglab.org/uploads/4/4/9/5/44953707/slu-rsl-logo.png',
-      logoWhiteBg: true,
+      logoUrl: '/img/logos/slu.png',
       location: 'St. Louis, MO',
       summary:
         'Led deep-learning research for digital agriculture, fusing multi-sensor UAV and satellite data to estimate crop traits and yield.',
       highlights: [
-        'Built a physics-informed transfer-learning framework (PROSAIL radiative-transfer model + deep neural networks), improving cross-environment generalization of crop-trait estimation by ~25%.',
-        'Developed end-to-end 3D CNNs (ResNet/DenseNet) for plot-scale soybean yield prediction from multi-temporal UAV imagery, scaling training from a local GPU cluster to AWS SageMaker.',
-        'Architected multimodal fusion CNNs integrating hyperspectral, thermal, and LiDAR data, outperforming single-sensor baselines for seed-composition estimation.',
-        'Engineered a photogrammetric calibration pipeline (bundle block adjustment) achieving sub-centimeter multi-sensor co-registration.',
+        'Improved cross-environment generalization of crop-trait estimation by ~25% by building a physics-informed transfer-learning framework that couples the PROSAIL radiative-transfer model with deep neural networks.',
+        'Outperformed 2D CNN baselines for plot-scale soybean yield prediction by developing end-to-end 3D CNNs (ResNet/DenseNet) that consume multi-temporal UAV imagery directly — eliminating hand-crafted feature pipelines — and scaling training from a local GPU cluster to AWS SageMaker.',
+        'Outperformed single-sensor baselines for seed-composition estimation by architecting multimodal fusion CNNs that integrate hyperspectral, thermal, and LiDAR data.',
+        'Achieved sub-centimeter multi-sensor co-registration by engineering a photogrammetric calibration pipeline based on bundle block adjustment.',
         'Published 4 first-author papers in top remote-sensing journals; presented at NAPPN, AGU, and AAG.',
       ],
       tech: ['Python', 'PyTorch', 'TensorFlow', 'Rasterio', 'GeoPandas', 'AWS SageMaker', 'Pix4D'],
@@ -94,15 +90,14 @@ export const site = {
       title: 'Research Assistant',
       company: 'GeoFEW Lab, Southern Illinois University',
       companyUrl: 'https://www.geofew.org/',
-      logoUrl: 'https://siu.edu/_common/images/homepage/saluki-dawg-maroon-500.svg',
-      logoWhiteBg: false,
+      logoUrl: '/img/logos/siu.png',
       location: 'Carbondale, IL',
       summary:
         'Applied high-performance computing and deep learning to hydrologic connectivity and terrain analysis.',
       highlights: [
-        'Implemented hydrologic-connectivity models with TauDEM on an HPC cluster to quantify the impact of anthropogenic drainage structures.',
-        'Trained a CNN to detect bridges and culverts from LiDAR-derived high-resolution DEMs.',
-        'Automated stream-delineation pipelines from DEMs using ArcPy.',
+        'Enabled watershed-scale connectivity analysis previously infeasible on single workstations by implementing TauDEM-based hydrologic-connectivity models on an HPC cluster to quantify the impact of anthropogenic drainage structures.',
+        'Replaced manual digitization across large LiDAR datasets by training a CNN to detect bridges and culverts from high-resolution DEMs.',
+        'Enabled batch stream-delineation at watershed scale by automating DEM-to-stream pipelines with ArcPy.',
       ],
       tech: ['Python', 'ArcPy', 'TensorFlow', 'HPC', 'ArcGIS'],
     },
@@ -111,14 +106,13 @@ export const site = {
       title: 'GIS Analyst',
       company: 'Institute of Water Modeling',
       companyUrl: 'https://www.iwmbd.org/',
-      logoUrl: 'https://www.iwmbd.org/assets/uploads/home/hero/iwm2024.png',
-      logoWhiteBg: true,
+      logoUrl: '/img/logos/iwm.png',
       location: 'Dhaka, Bangladesh',
       summary:
         'Built geospatial data-processing pipelines supporting large-scale flood-management and hydrological engineering projects in Bangladesh.',
       highlights: [
-        'Automated map-making and geospatial workflows with ArcPy, replacing manual processes for embankment and floodplain projects.',
-        'Analyzed multi-temporal satellite imagery to detect riverbank change using eCognition, ERDAS Imagine, and Google Earth Engine.',
+        'Standardized map outputs for engineering teams by automating map-making and geospatial workflows with ArcPy, replacing manual processes for embankment and floodplain projects.',
+        'Informed flood-management and engineering decisions by analyzing multi-temporal satellite imagery to detect riverbank change with eCognition, ERDAS Imagine, and Google Earth Engine.',
       ],
       tech: ['Python', 'ArcPy', 'Google Earth Engine', 'eCognition', 'ERDAS Imagine'],
     },
@@ -165,6 +159,12 @@ export const site = {
   ],
   awards: [
     {
+      name: '3-Minute Thesis — Runner-Up',
+      year: '2022',
+      awarder: 'Saint Louis University',
+      note: 'Second place university-wide for the talk "Fighting Food Insecurity by Seeing the Unseen."',
+    },
+    {
       name: 'David G. Arey Memorial Award',
       year: '2020',
       awarder: 'Southern Illinois University Carbondale',
@@ -176,14 +176,27 @@ export const site = {
       awarder: 'Dept. of Geography & Environmental Resources, SIUC',
       note: "Awarded for the highest GPA in the first year of the master's program.",
     },
-    {
-      name: '3-Minute Thesis — Runner-Up',
-      year: '2022',
-      awarder: 'Saint Louis University',
-      note: 'Second place university-wide for the talk "Fighting Food Insecurity by Seeing the Unseen."',
-    },
   ],
   featuredProjects: [
+    {
+      title: 'Peak Fall Color',
+      period: 'Generative AI · 2025',
+      badge: 'Live demo',
+      icon: 'ph:leaf',
+      summary:
+        'Travelers and leaf-peepers lack timely, location-specific forecasts of when fall foliage will peak — static seasonal calendars miss the spatial and year-to-year variation.',
+      solution:
+        'An interactive platform that predicts peak-foliage timing across the continental US from MODIS satellite time series using deep-learning transformers, served through a React/Leaflet map with a Gemini function-calling RAG chatbot for natural-language queries.',
+      impact:
+        'Turns satellite phenology science into a consumer-facing product — a full-stack showcase of generative AI, retrieval-augmented reasoning, and geospatial ML in one shipped application.',
+      image: 'img/peakfallcolor.png',
+      imageAlt: 'Peak Fall Color map interface',
+      links: [{ label: 'Live demo', href: 'https://www.peakfallcolor.com/', icon: 'ph:arrow-square-out' }],
+      techCategories: [
+        { category: 'ML / AI', items: ['Transformers', 'MODIS NDVI', 'Gemini Function Calling', 'RAG'] },
+        { category: 'Full Stack', items: ['React', 'FastAPI', 'Leaflet'] },
+      ],
+    },
     {
       title: 'Raster4ML',
       period: 'Open Source · 2022',
@@ -207,22 +220,22 @@ export const site = {
       ],
     },
     {
-      title: 'Peak Fall Color',
-      period: 'Generative AI · 2025',
-      badge: 'Live demo',
-      icon: 'ph:leaf',
+      title: 'MapLapse',
+      period: 'Open Source · 2022',
+      badge: 'PyPI package',
       summary:
-        'Travelers and leaf-peepers lack timely, location-specific forecasts of when fall foliage will peak — static seasonal calendars miss the spatial and year-to-year variation.',
+        "Static maps can't show how a region changes over time — building animated geospatial timelapses from scratch takes substantial matplotlib and GeoPandas plumbing.",
       solution:
-        'An interactive platform that predicts peak-foliage timing across the continental US from MODIS satellite time series using deep-learning transformers, served through a React/Leaflet map with a Gemini function-calling RAG chatbot for natural-language queries.',
+        'A Python library that turns a shapefile and a time-indexed dataset into animated choropleth or proportional-circle maps (GIF/MP4) with a single animate() call.',
       impact:
-        'Turns satellite phenology science into a consumer-facing product — a full-stack showcase of generative AI, retrieval-augmented reasoning, and geospatial ML in one shipped application.',
-      image: 'img/peakfallcolor.png',
-      imageAlt: 'Peak Fall Color map interface',
-      links: [{ label: 'Live demo', href: 'https://www.peakfallcolor.com/', icon: 'ph:arrow-square-out' }],
+        'Packaged on PyPI with ReadTheDocs docs, giving data scientists a reusable one-liner for temporal map storytelling.',
+      image: 'img/maplapse_logo.gif',
+      imageAlt: 'MapLapse logo',
+      imageStyle: 'contain',
+      links: [{ label: 'GitHub', href: 'https://github.com/souravbhadra/maplapse', icon: 'ph:github-logo' }],
       techCategories: [
-        { category: 'ML / AI', items: ['Transformers', 'MODIS NDVI', 'Gemini Function Calling', 'RAG'] },
-        { category: 'Full Stack', items: ['React', 'FastAPI', 'Leaflet'] },
+        { category: 'Core', items: ['Python', 'Matplotlib'] },
+        { category: 'Geospatial', items: ['GeoPandas', 'Shapely', 'Fiona'] },
       ],
     },
     {
@@ -249,45 +262,6 @@ export const site = {
       ],
     },
     {
-      title: 'MapLapse',
-      period: 'Open Source · 2022',
-      badge: 'PyPI package',
-      summary:
-        "Static maps can't show how a region changes over time — building animated geospatial timelapses from scratch takes substantial matplotlib and GeoPandas plumbing.",
-      solution:
-        'A Python library that turns a shapefile and a time-indexed dataset into animated choropleth or proportional-circle maps (GIF/MP4) with a single animate() call.',
-      impact:
-        'Packaged on PyPI with ReadTheDocs docs, giving data scientists a reusable one-liner for temporal map storytelling.',
-      image: 'img/maplapse_logo.gif',
-      imageAlt: 'MapLapse logo',
-      imageStyle: 'contain',
-      links: [{ label: 'GitHub', href: 'https://github.com/souravbhadra/maplapse', icon: 'ph:github-logo' }],
-      techCategories: [
-        { category: 'Core', items: ['Python', 'Matplotlib'] },
-        { category: 'Geospatial', items: ['GeoPandas', 'Shapely', 'Fiona'] },
-      ],
-    },
-    {
-      title: 'AgLapse',
-      period: 'Open Source · 2022',
-      badge: 'Interactive app',
-      icon: 'ph:chart-line-up',
-      summary:
-        'Understanding how US crop production shifts across counties and decades is hard to see in spreadsheets and static USDA reports.',
-      solution:
-        'A Streamlit web app that maps spatiotemporal trends for four major crops across US counties (1910–2021), combining USDA NASS statistics with Census TIGER boundaries and on-the-fly trend (slope) analysis.',
-      impact:
-        'A deployed, interactive tool that makes a century of agricultural data explorable for researchers and policymakers.',
-      links: [
-        { label: 'Live app', href: 'https://souravbhadra-ag-lapse-ag-lapse-app-1l9sgf.streamlit.app/', icon: 'ph:arrow-square-out' },
-        { label: 'GitHub', href: 'https://github.com/souravbhadra/ag-lapse', icon: 'ph:github-logo' },
-      ],
-      techCategories: [
-        { category: 'Data', items: ['USDA NASS', 'Census TIGER', 'Pandas', 'SciPy'] },
-        { category: 'App / Geospatial', items: ['Streamlit', 'GeoPandas', 'Folium'] },
-      ],
-    },
-    {
       title: 'PROSAIL-Net',
       period: 'Research · ISPRS J. P&RS, 2024',
       badge: 'Peer-reviewed',
@@ -302,23 +276,6 @@ export const site = {
       techCategories: [
         { category: 'Methods', items: ['Transfer Learning', 'PROSAIL RTM', 'Dual-Stream NN'] },
         { category: 'Stack', items: ['PyTorch', 'Hyperspectral', 'UAV'] },
-      ],
-    },
-    {
-      title: 'Plot-Scale Yield with 3D CNNs',
-      period: 'Research · Precision Agriculture, 2023',
-      badge: 'Peer-reviewed',
-      icon: 'ph:cube',
-      summary:
-        'Predicting soybean yield early and at plot scale requires capturing how the crop develops over the season, not just a single snapshot — a spatiotemporal problem classical features handle poorly.',
-      solution:
-        'An end-to-end 3D CNN (ResNet/DenseNet) trained on multi-temporal UAV RGB imagery, with the full training-and-inference pipeline scaled from a local GPU cluster onto AWS SageMaker.',
-      impact:
-        'Delivered accurate plot-scale yield prediction and demonstrated the value of temporal data over single-date imagery; published as first author in Precision Agriculture.',
-      links: [{ label: 'Read paper', href: 'https://doi.org/10.1007/s11119-023-10096-8', icon: 'ph:file-text' }],
-      techCategories: [
-        { category: 'Methods', items: ['3D CNN', 'ResNet / DenseNet', 'Spatiotemporal DL'] },
-        { category: 'Stack', items: ['PyTorch', 'AWS SageMaker', 'UAV RGB'] },
       ],
     },
   ],
