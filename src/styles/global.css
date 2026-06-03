@@ -210,14 +210,8 @@
 
 
   @keyframes pageFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   body {
@@ -225,7 +219,6 @@
     color: var(--color-maintext);
     @apply antialiased;
     opacity: 0;
-    transform: translateY(10px);
     animation: pageFadeIn 0.75s ease-out 0.08s forwards;
     background: linear-gradient(
       135deg,

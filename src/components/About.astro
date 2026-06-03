@@ -1,7 +1,8 @@
 ---
 import { site } from '@data/site';
+import { Icon } from 'astro-icon/components';
 
-type AboutParagraph =
+type DetailParagraph =
   | string
   | {
       text?: string;
@@ -12,7 +13,8 @@ type AboutParagraph =
       techItems?: string[];
     };
 
-const paragraphs = site.about.paragraphs as readonly AboutParagraph[];
+const { intro, details } = site.about;
+const detailParagraphs = details as readonly DetailParagraph[];
 ---
 
 <section
@@ -21,51 +23,73 @@ const paragraphs = site.about.paragraphs as readonly AboutParagraph[];
   aria-labelledby="about-heading"
 >
   <h2 id="about-heading" class="section-heading">About</h2>
-  <div class="reveal-content grid items-start gap-10">
-    <div class="space-y-8 body-copy">
-      {paragraphs.map((p) =>
-        typeof p === 'string' ? (
-          <p>{p}</p>
-        ) : (
-          <>
-            {'text' in p && p.text !== undefined && (
-              <p>
-                {p.text}
-                {p.link && (
-                  <a href={p.link.href} class="subtle-link text-accent" target="_blank" rel="noreferrer">
-                    {p.link.text}
-                  </a>
-                )}
-                {'textAfter' in p && p.textAfter}
-              </p>
-            )}
-            {p.heading && (
-              <div class="space-y-2">
-                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{p.heading}</p>
+  <div class="reveal-content space-y-8">
 
-                {p.bullets && (
-                  <ul class="list-disc space-y-1 pl-5">
-                    {p.bullets.map((bullet) => (
-                      <li>{bullet}</li>
-                    ))}
-                  </ul>
-                )}
+    <!-- Intro bullets -->
+    <div class="space-y-4">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{intro.heading}</p>
+      <ul class="space-y-3 body-copy">
+        {intro.bullets.map((bullet) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.35em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+            <span>{bullet}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-                {p.techItems && (
-                  <div class="mt-3 flex flex-wrap gap-2">
-                    {p.techItems.map((tech) => (
-                      <span class="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                        {tech}
-                      </span>
-                    ))}
+    <!-- Collapsible details -->
+    <details class="smooth-details group">
+      <summary class="flex cursor-pointer select-none list-none items-center gap-2 text-sm font-medium text-accent/80 transition-colors hover:text-accent [&::-webkit-details-marker]:hidden">
+        <Icon name="ph:caret-right" class="h-3.5 w-3.5 transition-transform duration-300 group-open:rotate-90" />
+        <span>More about me</span>
+      </summary>
+      <div class="details-content overflow-hidden">
+        <div class="space-y-6 body-copy pt-6">
+          {detailParagraphs.map((p) =>
+            typeof p === 'string' ? (
+              <p>{p}</p>
+            ) : (
+              <>
+                {'text' in p && p.text !== undefined && (
+                  <p>
+                    {p.text}
+                    {p.link && (
+                      <a href={p.link.href} class="subtle-link text-accent" target="_blank" rel="noreferrer">
+                        {p.link.text}
+                      </a>
+                    )}
+                    {'textAfter' in p && p.textAfter}
+                  </p>
+                )}
+                {p.heading && (
+                  <div class="space-y-2">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{p.heading}</p>
+                    {p.bullets && (
+                      <ul class="list-disc space-y-1 pl-5">
+                        {p.bullets.map((bullet) => (
+                          <li>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {p.techItems && (
+                      <div class="mt-3 flex flex-wrap gap-2">
+                        {p.techItems.map((tech) => (
+                          <span class="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
-              </div>
-            )}
-          </>
-        )
-      )}
-    </div>
+              </>
+            )
+          )}
+        </div>
+      </div>
+    </details>
+
   </div>
 </section>
 
@@ -82,4 +106,28 @@ const paragraphs = site.about.paragraphs as readonly AboutParagraph[];
       transform: translateY(0);
     }
   }
+
+  .smooth-details .details-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
 </style>
+
+<script>
+  function initSmoothDetails() {
+    document.querySelectorAll('.smooth-details').forEach((el) => {
+      const details = el as HTMLDetailsElement;
+      const content = details.querySelector('.details-content') as HTMLElement | null;
+      if (!content) return;
+      if (details.open) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+      details.addEventListener('toggle', () => {
+        content.style.maxHeight = details.open ? content.scrollHeight + 'px' : '0';
+      });
+    });
+  }
+  initSmoothDetails();
+  document.addEventListener('astro:after-swap', initSmoothDetails);
+</script>

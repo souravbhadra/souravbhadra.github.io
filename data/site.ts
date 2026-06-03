@@ -22,14 +22,21 @@ export const site = {
     avatarAlt: 'Sourav Bhadra',
   },
   about: {
-    paragraphs: [
-      "👋👋👋 Hello! I'm an ML researcher and geospatial data scientist with 6+ years experience in turning multimodal data into outcomes that move both the business and the science. My home turf is deep-learning-based data fusion ranging from handheld cameras, ground robots, drones, to satellites with explainability built in from the start.",
-      "Across every domain I've worked in, I keep stakeholders at the center. The win isn't the shiniest architecture, it's the outcome the people on the other side actually need. That's what decides which models I build, which I walk away from, and how I measure success.",
-      "Outside of work, I'm a husband, a father to a toddler, and a lifelong learner. I love learning new things, building things, and sharing what I learn with others. I'm also a big fan of traveling, cooking, and trying new foods. I also play guitar and sing sometimes.",
+    intro: {
+      heading: '👋 Hello 👋 I am:',
+      bullets: [
+        'An ML researcher and geospatial data scientist',
+        'A husband and a proud father',
+        'A hobbyist who enjoys traveling, cooking, and playing guitar',
+      ],
+    },
+    details: [
+      "I'm an ML researcher and geospatial data scientist with 6+ years of experience turning multimodal data into outcomes that move both the business and the science. My home turf is deep-learning-based data fusion — from handheld cameras, ground robots, and drones to satellites — with explainability built in from the start.",
+      "Across every domain I've worked in, I keep stakeholders at the center. The win isn't the shiniest architecture; it's the outcome the people on the other side actually need. That's what decides which models I build, which I walk away from, and how I measure success.",
       {
         heading: 'Currently exploring',
         bullets: [
-          'Agentic AI for the coding workflows, personal knowledge management, and small automations that compound.',
+          'Agentic AI for coding workflows, personal knowledge management, and small automations that compound.',
           "Geospatial foundation models; their uses, how to fine-tune them for specific cases, and how to bridge them with LLMs (which they don't slot into naturally). Most of my experiments live in agriculture, but the questions generalize to other domains.",
         ],
       },
